@@ -18,10 +18,10 @@ app.use(express.json());
 app.use(cors());
 
 //routes
-app.use("/api/v1/users" , require("./routes/userRoute"));
+app.use("/users" , require("./routes/userRoute"));
 
 //Transection Routes
-app.use("/api/v1/transections", require("./routes/transectionRoutes"));
+app.use("/transections", require("./routes/transectionRoutes"));
 
 //Static File
 app.use(express.static(path.join(__dirname, './client/build')))
